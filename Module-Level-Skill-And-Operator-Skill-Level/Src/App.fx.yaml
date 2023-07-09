@@ -1,0 +1,17 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =NewForm(FormModuleSkill);
+        Refresh('Module Skill');
+        Set(varVisible,DisplayMode.Disabled);
+        Set(varReset,true);
+        ClearCollect(SkillMatrixEPFnoData,'Skill Matrix Name/EPF')
+    StartScreen: ='MAIN PAGE'
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

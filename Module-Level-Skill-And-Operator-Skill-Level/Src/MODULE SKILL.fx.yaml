@@ -1,0 +1,715 @@
+"'MODULE SKILL' As screen":
+    Fill: =RGBA(187, 221, 140, 1)
+
+    Label1_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(128, 128, 128, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(232, 244, 217, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =62
+        Size: =25
+        Text: ="Module Skill"
+        Width: =1292
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Label2_54 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        Visible: = true
+        X: =1157
+        Y: =705
+        ZIndex: =6
+
+    DigitalizationImages As group:
+        Height: =5
+        Width: =5
+        X: =-769
+        Y: =60
+        ZIndex: =6
+
+        Image3_1 As image:
+            DisplayMode: =DisplayMode.View
+            Height: =106
+            Image: ='mas-holdings-logo-2ACA338CD6-seeklogo.com'
+            Width: =171
+            X: =818
+            Y: =23
+            ZIndex: =2
+
+        Label2_52 As label:
+            Align: =Align.Right
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            Text: ="IE DIGITALIZATION"
+            Width: =180
+            X: =1127
+            Y: =728
+            ZIndex: =4
+
+        Label2_53 As label:
+            Align: =Align.Right
+            Color: =RGBA(179, 179, 179, 1)
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Bold
+            Height: =33
+            Size: =16
+            Text: ="ACTIVE LINEA INTIMO - IE"
+            Width: =280
+            X: =989
+            Y: =68
+            ZIndex: =5
+
+    FormModuleSkill As form:
+        DataSource: ='Module Skill'
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =590
+        NumberOfColumns: =1
+        OnSuccess: =NewForm(FormModuleSkill)
+        Width: =436
+        X: =40
+        Y: =114
+        ZIndex: =7
+
+        "'Module Skill Code_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ModuleSkillCode"
+            Default: =ThisItem.'Module Skill Code'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Module Skill'],DataSourceInfo.DisplayName,"ModuleSkillCode")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Module Skill'], DataSourceInfo.MaxLength, "ModuleSkillCode")
+            Required: =true
+            Update: =DataCardValue9.Text
+            Visible: =false
+            Width: =436
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey9 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue9 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Upper(Concatenate(RoundUp(Month(DataCardValue2)/3,0),DataCardValue3.Selected.Value,DataCardValue4,Dropdown1.Selected.Value,Dropdown2.Selected.Value))
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                ZIndex: =2
+
+            ErrorMessage9 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue9.Y + DataCardValue9.Height
+                ZIndex: =3
+
+            StarVisible9 As label:
+                Align: =Align.Center
+                Height: =DataCardKey9.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey9.Y
+                ZIndex: =4
+
+        "'Machine Type_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Machine_x0020_Type"
+            Default: =ThisItem.'Machine Type'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Module Skill'],DataSourceInfo.DisplayName,"Machine_x0020_Type")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Module Skill'], DataSourceInfo.MaxLength, "Machine_x0020_Type")
+            Required: =true
+            Update: =DataCardValue1.Text
+            Width: =436
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =34
+                Size: =15
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Dropdown1.Selected.Value
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Visible: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            Dropdown1 As dropdown:
+                Default: =""
+                Items: =Distinct('Machine Type & Silhouette','Machine Type')
+                Reset: =varReset
+                Width: =376
+                X: =30
+                Y: =52
+                ZIndex: =4
+
+        Silhouette_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Silhouette"
+            Default: =ThisItem.Silhouette
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Module Skill'],DataSourceInfo.DisplayName,"Silhouette")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Module Skill'], DataSourceInfo.MaxLength, "Silhouette")
+            Required: =true
+            Update: =DataCardValue5.Text
+            Width: =436
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =34
+                Size: =15
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Dropdown2.Selected.Value
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Visible: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            Dropdown2 As dropdown:
+                Items: =Distinct(Filter('Machine Type & Silhouette', 'Machine Type' = Dropdown1.Selected.Value),Silhouette)
+                Reset: =varReset
+                Width: =376
+                X: =30
+                Y: =52
+                ZIndex: =4
+
+        Date_DataCard1 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Date"
+            Default: =ThisItem.Date
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Module Skill'],DataSourceInfo.DisplayName,"Date")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue2.SelectedDate
+            Width: =436
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =34
+                Size: =15
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+        Section_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Section"
+            Default: =ThisItem.Section
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Module Skill'],DataSourceInfo.DisplayName,"Section")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue3.Selected
+            Width: =436
+            X: =0
+            Y: =1
+            ZIndex: =8
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =34
+                Size: =15
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@'Module Skill'].Section)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Module Skill'.Section,DataCardValue3.SearchText)
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+        Module_DataCard1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Module"
+            Default: =ThisItem.Module
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Module Skill'],DataSourceInfo.DisplayName,"Module")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue4.Text)
+            Width: =436
+            X: =0
+            Y: =2
+            ZIndex: =8
+
+            DataCardKey4 As label:
+                AutoHeight: =true
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =34
+                Size: =15
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Dropdown3.Selected.Value
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Visible: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            Dropdown3 As dropdown:
+                Items: =Distinct(Filter('Module Skill - Section/Module/Core-NonCore',Section=DataCardValue3.Selected.Value),Module)
+                Width: =376
+                X: =30
+                Y: =52
+                ZIndex: =4
+
+        Skill_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Skill"
+            Default: =ThisItem.Skill
+            DisplayMode: |-
+                =
+                //varVisible
+                If(Len(LookUp('Module Skill',Label1.Text ='Module Skill Code','Module Skill Code')) > 10,DisplayMode.Disabled,DisplayMode.Edit)
+            DisplayName: =DataSourceInfo([@'Module Skill'],DataSourceInfo.DisplayName,"Skill")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue7.Selected
+            Width: =436
+            X: =0
+            Y: =396
+            ZIndex: =8
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =34
+                Size: =15
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue7 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@'Module Skill'].Skill)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Module Skill'.Skill,DataCardValue7.SearchText)
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                ZIndex: =2
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+    Button1_1 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =35
+        OnSelect: |+
+            =ResetForm(FormModuleSkill);NewForm(FormModuleSkill);Set(varGalleryMS,Blank());Set(varGalleryMS,{});
+            Set(varVisible,DisplayMode.Disabled)
+            
+        Text: ="Add New"
+        X: =70
+        Y: =717
+        ZIndex: =8
+
+    Button1 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =35
+        OnSelect: |+
+            =If(Len(LookUp('Module Skill',Label1.Text ='Module Skill Code','Module Skill Code')) > 10,Set(varAlreadyExist,"This Module skill already exist for this quater"),SubmitForm(FormModuleSkill));
+            Set(varVisible,DisplayMode.Disabled);
+            Refresh('Module Skill');
+            Refresh('Machine Type & Silhouette')
+            
+        Text: ="Save"
+        X: =281
+        Y: =717
+        ZIndex: =9
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(166, 166, 166, 1)
+        Height: =591
+        Items: ='Module Skill'
+        SelectedFill: =RGBA(255, 191, 0, 1)
+        Width: =839
+        X: =493
+        Y: =114
+        ZIndex: =10
+
+        Date_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Date"
+            FieldName: ="Date"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.Date
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+        Section_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Section"
+            FieldName: ="Section"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Section.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =11
+
+        Module_Column1 As dataTableColumn.numberColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Module"
+            FieldName: ="Module"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Module
+            Width: =132
+            X: =267
+            Y: =0
+            ZIndex: =12
+
+        Skill_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Skill"
+            FieldName: ="Skill"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.Skill.Value
+            Width: =55
+            X: =0
+            Y: =0
+            ZIndex: =13
+
+        "'Machine Type_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Machine Type"
+            FieldName: ="Machine_x0020_Type"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.'Machine Type'
+            Width: =100
+            X: =442
+            Y: =0
+            ZIndex: =15
+
+        Silhouette_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Silhouette"
+            FieldName: ="Silhouette"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.Silhouette
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =16
+
+    Label1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(253, 222, 207, 1)
+        Height: =38
+        Text: =Upper(Concatenate(RoundUp(Month(DataCardValue2)/3,0),DataCardValue3.Selected.Value,DataCardValue4,Dropdown1.Selected.Value,Dropdown2.Selected.Value))
+        Visible: =false
+        Width: =352
+        X: =70
+        Y: =52
+        ZIndex: =11
+
+    Label4 As label:
+        Align: =Align.Center
+        Fill: =RGBA(215, 223, 240, 1)
+        Height: =42
+        Text: =Len(LookUp('Module Skill',Label1.Text ='Module Skill Code','Module Skill Code'))
+        Visible: =false
+        Width: =60
+        X: =454
+        Y: =52
+        ZIndex: =12
+
+    Icon1 As icon.Trash:
+        Icon: =Icon.Trash
+        OnSelect: =Remove('Module Skill',DataTable1.Selected)
+        X: =1268
+        Y: =640
+        ZIndex: =14
+
+    Label2 As label:
+        Fill: =RGBA(241, 244, 249, 1)
+        Text: |-
+            =
+            //varAlreadyExist
+            
+            If(Len(LookUp('Module Skill',Label1.Text ='Module Skill Code','Module Skill Code')) > 10,"This Module skill already exist for this quater","
+            ")
+        Width: =587
+        X: =493
+        Y: =712
+        ZIndex: =15
+
+    Icon2 As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =50
+        Icon: =Icon.Home
+        OnSelect: =Navigate('MAIN PAGE')
+        Width: =50
+        X: =52
+        Y: =44
+        ZIndex: =16
+
+    Button2 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(250, 221, 5, 1)
+        OnSelect: =Navigate(DASHBOARD)
+        Text: ="PBI Dasboard"
+        X: =121
+        Y: =52
+        ZIndex: =17
+

@@ -1,0 +1,94 @@
+"'MAIN PAGE' As screen":
+    Fill: =RGBA(187, 221, 140, 1)
+
+    Label1_4 As label:
+        Align: =Align.Center
+        Color: =RGBA(128, 128, 128, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(232, 244, 217, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =62
+        Size: =25
+        Text: ="Skill Level"
+        Width: =1292
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Label2_60 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        Visible: = true
+        X: =1157
+        Y: =705
+        ZIndex: =6
+
+    DigitalizationImages_2 As group:
+        Height: =5
+        Width: =5
+        X: =-769
+        Y: =60
+        ZIndex: =6
+
+        Image3_3 As image:
+            DisplayMode: =DisplayMode.View
+            Height: =106
+            Image: ='mas-holdings-logo-2ACA338CD6-seeklogo.com'
+            Width: =171
+            X: =818
+            Y: =23
+            ZIndex: =2
+
+        Label2_61 As label:
+            Align: =Align.Right
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            Text: ="IE DIGITALIZATION"
+            Width: =180
+            X: =1127
+            Y: =728
+            ZIndex: =4
+
+        Label2_59 As label:
+            Align: =Align.Right
+            Color: =RGBA(179, 179, 179, 1)
+            DisplayMode: =DisplayMode.View
+            FontWeight: =FontWeight.Bold
+            Height: =33
+            Size: =16
+            Text: ="ACTIVE LINEA INTIMO - IE"
+            Width: =280
+            X: =989
+            Y: =68
+            ZIndex: =5
+
+    Button3 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =110
+        OnSelect: =Navigate('MODULE SKILL')
+        Size: =20
+        Text: ="Module Skill"
+        Width: =560
+        X: =772
+        Y: =155
+        ZIndex: =7
+
+    Button3_1 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =110
+        OnSelect: |+
+            =Navigate(SKILL);
+            ClearCollect(SkillLevelData,'Skill Matrix Machine/Operation');
+            
+            
+        Size: =20
+        Text: ="Skill"
+        Width: =560
+        X: =772
+        Y: =300
+        ZIndex: =8
+

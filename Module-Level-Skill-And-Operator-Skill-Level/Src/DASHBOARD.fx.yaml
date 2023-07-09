@@ -1,0 +1,43 @@
+DASHBOARD As screen:
+    Fill: =RGBA(187, 221, 140, 1)
+
+    PowerBI1 As powerbi:
+        Height: =765
+        TileUrl: |-
+            ="https://app.powerbi.com/reportEmbed?reportId=44c605ca-eebc-4966-b74a-045b1f6f934b&autoAuth=true&ctid=852c5799-8134-4f15-9d38-eba4296cc76f"
+        Width: =1366
+        WorkspaceId: ="e6734756-d574-4173-9dfe-2ef3f201bfd6"
+        Y: =3
+        ZIndex: =1
+
+    Label2_56 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        Visible: = true
+        X: =1157
+        Y: =705
+        ZIndex: =2
+
+    Icon2_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate('MODULE SKILL')
+        Width: =50
+        X: =77
+        Y: =16
+        ZIndex: =3
+
+    Icon2_4 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Home
+        OnSelect: =Navigate('MAIN PAGE')
+        Width: =50
+        X: =12
+        Y: =16
+        ZIndex: =4
+

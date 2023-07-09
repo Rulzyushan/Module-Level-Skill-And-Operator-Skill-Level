@@ -1,0 +1,47 @@
+{
+  "e3098a27-4fc6-4487-8a86-f4d16a466bfc": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3310/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://massl.sharepoint.com/sites/LineaIntimo/IEDigitalization": {
+        "dataSources": {
+          "Machine Type & Silhouette": {
+            "tableName": "96f12dac-1325-4091-9037-bcd10195eea2"
+          },
+          "Module Skill": {
+            "tableName": "081070d8-2af6-406d-be19-9ffc7f5a9ced"
+          },
+          "Module Skill - Section/Module/Core-NonCore": {
+            "tableName": "ff2c6d68-8313-4a24-ad42-5b07af0cf55e"
+          },
+          "Skill Matrix": {
+            "tableName": "1fa242b8-fd0f-4524-b851-32d9fa8d5951"
+          },
+          "Skill Matrix Machine/Operation": {
+            "tableName": "bb5bde66-cab9-40cd-872c-d662cf656a39"
+          },
+          "Skill Matrix Name/EPF": {
+            "tableName": "bcb68636-0870-4c31-bb40-1c9eaf2b6599"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Module Skill",
+      "Machine Type & Silhouette",
+      "Module Skill - Section/Module/Core-NonCore",
+      "Skill Matrix Machine/Operation",
+      "Skill Matrix Name/EPF",
+      "Skill Matrix"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e3098a27-4fc6-4487-8a86-f4d16a466bfc"
+  }
+}
